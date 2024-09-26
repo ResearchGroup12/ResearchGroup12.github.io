@@ -36,6 +36,36 @@
       font: inherit; /* Inherit the main font style */
       cursor: pointer;
       border-radius: 5px;
+      position: relative; /* For dropdown */
+    }
+
+    /* Dropdown menu */
+    .button:hover .dropdown {
+      display: flex;
+    }
+
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 40px; /* Adjust based on button size */
+      left: 0;
+      background-color: #f9f9f9;
+      min-width: 200px;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      flex-direction: row; /* Horizontal dropdown */
+      flex-wrap: wrap; /* Wrap links if too many for single row */
+    }
+
+    .dropdown a {
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      color: black;
+    }
+
+    .dropdown a:hover {
+      background-color: #ddd;
     }
 
     .content {
@@ -64,8 +94,20 @@
         <div class="column has-text-centered">
           <h1 class="title is-1">MotionAura: Generating High Quality and Motion Consistent Videos using Discrete Diffusion</h1>
           <div class="buttons">
-            <button class="button" onclick="window.location.href='blank.html';">Text-To-Video</button>
-            <button class="button" onclick="window.location.href='blank.html';">Sketch-based Inpainting</button>
+            <div class="button">Text-To-Video
+              <!-- Dropdown Links with 9 links -->
+              <div class="dropdown">
+                <a href="blank.html">Link 1</a>
+                <a href="blank1.html">Link 2</a>
+                <a href="blank2.html">Link 3</a>
+                <a href="blank3.html">Link 4</a>
+                <a href="blank4.html">Link 5</a>
+                <a href="blank5.html">Link 6</a>
+                <a href="blank6.html">Link 7</a>
+                <a href="blank.html">Link 8</a>
+                <a href="blank.html">Link 9</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>

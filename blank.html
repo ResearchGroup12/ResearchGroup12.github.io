@@ -17,7 +17,7 @@
   <style>
     body {
       font-family: 'Google Sans', sans-serif;
-      background-color: #f0f0f0;
+      background-color: #ffffff; /* Updated background color to white */
       margin: 0;
       padding: 0;
     }
@@ -33,20 +33,22 @@
     .video-grid {
       display: flex;
       flex-direction: column;
-      align-items: center; /* Center the videos */
+      align-items: center; /* Center the video */
       gap: 20px;
       margin: 40px 20px;
     }
 
     .video-container {
-      background-color: #000;
-      width: auto; /* Let the videos take their natural width */
-      height: auto; /* Let the videos take their natural height */
+      background-color: #ffffff;
+      width: auto; /* Let the video take its natural width */
+      height: auto; /* Let the video take its natural height */
     }
 
     video {
-      width: 100%;
-      height: auto;
+      max-width: 90vw; /* Max width to prevent overflow */
+      max-height: 80vh; /* Max height to ensure visibility without scrolling */
+      width: auto; /* Auto-scaling */
+      height: auto; /* Auto-scaling */
     }
   </style>
 
@@ -60,33 +62,9 @@
   <section class="section">
     <div class="container">
       <div class="video-grid">
-        <!-- Video 1 -->
+        <!-- Video -->
         <div class="video-container">
           <video src="./static/videos/1.mp4" controls muted loop></video>
-        </div>
-        <!-- Video 2 -->
-        <div class="video-container">
-          <video src="./static/videos/2.mp4" controls muted loop></video>
-        </div>
-        <!-- Video 3 -->
-        <div class="video-container">
-          <video src="./static/videos/3.mp4" controls muted loop></video>
-        </div>
-        <!-- Video 4 -->
-        <div class="video-container">
-          <video src="./static/videos/4.mp4" controls muted loop></video>
-        </div>
-        <!-- Video 5 -->
-        <div class="video-container">
-          <video src="./static/videos/5.mp4" controls muted loop></video>
-        </div>
-        <!-- Video 6 -->
-        <div class="video-container">
-          <video src="./static/videos/6.mp4" controls muted loop></video>
-        </div>
-        <!-- Video 7 -->
-        <div class="video-container">
-          <video src="./static/videos/7.mp4" controls muted loop></video>
         </div>
       </div>
     </div>
